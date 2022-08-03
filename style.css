@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+
+  --Transparent-white-p: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: center;
+  background-color: var(--Very-light-gray);
+  display: flex;
+  font-family: "Lexend Dec", sans-serif;
+  min-height: 100vh;
+  justify-content: center;
+  margin: 20px;
+}
+
+h1 {
+  font-family: "Big Shoulders Display", sans-serif;
+  color: var(--Very-light-gray);
+  text-transform: uppercase;
+  font-size: 40px;
+}
+
+section {
+  align-items: flex-end;
+  padding: 50px;
+  display: grid;
+  grid-template-rows: repeat(3, auto) 1fr;
+  gap: 30px;
+  flex: 1 1 0;
+}
+
+p {
+  color: var(--Transparent-white-p);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+button {
+  background-color: var(--Very-light-gray);
+  border: 1px solid var(--Very-light-gray);
+  border-radius: 25px;
+  padding: 15px 40px;
+  width: fit-content;
+  margin-top: 40px;
+  font-family: "Lexend Dec", sans-serif;
+  font-size: 15px;
+  /* font-weight: 700; */
+}
+
+#sedans button:hover,
+#suvs button:hover,
+#luxury button:hover {
+  background-color: transparent;
+  color: var(--Very-light-gray);
+}
+
+#card {
+  max-width: 880px;
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#sedans {
+  background-color: var(--Bright-orange);
+}
+
+#sedans button {
+  color: var(--Bright-orange);
+}
+
+#suvs {
+  background-color: var(--Dark-cyan);
+}
+
+#suvs button {
+  color: var(--Dark-cyan);
+}
+
+#luxury {
+  background-color: var(--Very-dark-cyan);
+}
+
+#luxury button {
+  color: var(--Very-dark-cyan);
+}
+
+/* Mobile design */
+@media screen and (min-width: 375px) and (max-width: 1439px) {
+  #card {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+  }
+
+  button {
+    margin-top: 0;
+  }
+}
